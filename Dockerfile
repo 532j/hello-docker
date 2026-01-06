@@ -7,5 +7,9 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . .
 
-# Run hello.py when the container launches
-CMD ["python", "hello.py"]
+
+# Install requests
+RUN pip install requests
+
+# Run api_test.py when the container launches
+CMD ["python", "api_test.py"]
