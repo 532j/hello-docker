@@ -9,7 +9,7 @@ COPY . .
 
 
 # Install requests
-RUN pip install requests
+RUN pip install requests openpyxl python-docx
 
 # Run api_test.py when the container launches
 CMD ["python", "api_test.py"]
