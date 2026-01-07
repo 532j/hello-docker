@@ -8,8 +8,11 @@ WORKDIR /app
 COPY . .
 
 
-# Install requests
-RUN pip install requests openpyxl python-docx
+# Install requests and streamlit
+RUN pip install requests openpyxl python-docx streamlit openai
 
-# Run api_test.py when the container launches
-CMD ["python", "api_test.py"]
+# Expose port 8501
+EXPOSE 8501
+
+# Run app.py using streamlit
+CMD ["streamlit", "run", "app.py", "--server.address=0.0.0.0"]

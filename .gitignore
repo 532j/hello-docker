@@ -1,1 +1,4 @@
 samples/
+extracted_texts/
+.env
+__pycache__/
